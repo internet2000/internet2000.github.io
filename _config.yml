@@ -1,0 +1,40 @@
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+excerpt_separator: <!-- more -->
+baseurl: /internet2000
+url: ''
+permalink: '/:title:'
+# pagination:
+#   enabled: true
+#   debug: true
+#   per_page: 10
+#   permalink: '/page/:num/'
+
+# add vendor to fix the build on github pages, after the github action
+# default values from https://jekyllrb.com/docs/troubleshooting/
+exclude:
+  - vendor
+  - admin
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+
+# this fixes an issue in forestry preview server
+repository: lexoyo/internet2000
+
+# autopages:
+#   enabled: true
+#   tags:
+#     layouts:
+#       - 'tags.html'
+#     title: 'Posts tagged with :tag'
+#     permalink: '/tag/:tag'
+#     slugify:
+#       mode: 'default'
+#       case: false
+#   categories:
+#     enabled: false
+#   collections: 
+#     enabled: false
