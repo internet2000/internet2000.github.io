@@ -69,5 +69,4 @@ requiredFields: ["caption", "source_url", "created_at", "url", "embed_code"]
 # List of transformations to apply to any of the fields supplied. Keys are
 # the name of the field and values are possible transformation types.
 transforms:
-  email: md5
-  message: frontmatterContent
+  caption: frontmatterContent
