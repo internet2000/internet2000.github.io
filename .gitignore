@@ -1,4 +1,4 @@
-.bundle
-vendor
 _site
-
+node_modules
+images
+img
