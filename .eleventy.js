@@ -49,6 +49,9 @@ module.exports = function(eleventyConfig) {
   // eleventyConfig.addFilter('where', function(arr, attr, val) {
   //   return arr.filter(item => item[attr] === val)
   // })
+  eleventyConfig.addFilter('whereData', function(arr, attr, val) {
+    return arr.filter(item => item.data[attr] === val)
+  })
   // eleventyConfig.addFilter('langPath', function(lang) {
   //   return lang === 'fr' ? '/fr' : ''
   // })

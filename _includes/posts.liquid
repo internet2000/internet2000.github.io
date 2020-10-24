@@ -1,6 +1,5 @@
-<ul>
-{% for item in collections.posts %}
-<li><h3>{{ item.templateContent }}</h3></li>
+{% assign items = collections.posts | whereData: 'lang', lang %}
+{% for item in items %}
+<article>{{ item.templateContent }}</article>
 {% endfor %}
-</ul>
 
