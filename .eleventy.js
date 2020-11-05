@@ -181,6 +181,7 @@ module.exports = function(eleventyConfig) {
 
   // other config
   return {
+    baseurl: process.env.BASE_URL,
     dir: {
       layouts: '_layouts',
       includes: '_includes',
