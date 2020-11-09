@@ -1,5 +1,5 @@
 {% assign items = collections.posts | whereData: 'lang', lang %}
-{% for item in items %}
+{% for item in items limit:10 %}
 <article>{{ item.templateContent }}</article>
 {% endfor %}
 
