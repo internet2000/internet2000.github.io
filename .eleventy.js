@@ -84,7 +84,7 @@ module.exports = function(eleventyConfig) {
   const sitemap = require("@quasibit/eleventy-plugin-sitemap")
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {
-      hostname: "https://www.belighted.com",
+      hostname: "https://internet2000.net",
     },
   })
 
