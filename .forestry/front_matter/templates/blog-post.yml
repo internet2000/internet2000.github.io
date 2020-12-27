@@ -1,9 +1,4 @@
 ---
 label: Blog post
 hide_body: false
-fields:
-- name: permalink
-  type: text
-  config:
-    required: false
-  label: Permalink
+fields: []
