@@ -1,5 +1,8 @@
 {% assign items = collections.posts | whereData: 'lang', lang %}
 {% for item in items limit:10 %}
-<article>{{ item.templateContent }}</article>
+  <article>
+    <img class="insta-image" alt="{{item.data.title}}" src="{{site.url}}{{site.baseurl}}{{item.data.image}}">
+    <p class="insta-content">{{ item.template.frontMatter.content }}</p>
+  </article>
 {% endfor %}
 
