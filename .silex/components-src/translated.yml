@@ -1,0 +1,28 @@
+---
+name: translated
+displayName: Translated text
+description: 'Text field with multiple languages support'
+category: Components
+tags:
+- UI
+- translation
+baseElement: text
+  #initialCssClass:
+  #initialCss:
+  #  width: 30px
+  #  background-color: 'transparent'
+  #  display: flex
+  #  justify-content: center;
+  #  align-items: center;
+faIconClass: fa-language
+props:
+- name: languages
+  displayName: Languages
+  type:
+    - name: lang
+      type: string
+    - name: text
+      type: multiline
+- name: preview
+  type: string
+  default: "edit component params"

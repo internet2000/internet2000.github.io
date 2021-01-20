@@ -1,0 +1,25 @@
+---
+name: Back to top button
+description: 'Drop anywhere and it will stick to the bottom. Style with text styles'
+category: Components
+tags:
+- UI
+baseElement: text
+initialCssClass:
+  fixed
+initialCss:
+  width: 30px
+  background-color: 'transparent'
+  display: flex
+  justify-content: center;
+  align-items: center;
+faIconClass: fa-arrow-up
+props:
+- name: symbol
+  displayName: Symbol
+  type:
+    - ''
+    - ▲
+    - 🠕
+    - ⇧
+  default: ▲

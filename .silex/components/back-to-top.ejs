@@ -1,0 +1,41 @@
+<%- symbol %>
+
+<script>
+  if($('body').hasClass('silex-runtime')) {
+    var component = $(document.scripts[document.scripts.length - 1]).closest('.editable-style')
+    $('body').append(component)
+    component.hide()
+    component.css({
+      position: 'absolute',
+      cursor: 'pointer',
+    })
+    $(window).scroll(function() {
+        if ($(this).scrollTop()) {
+            component.fadeIn();
+        } else {
+            component.fadeOut();
+        }
+    });
+
+    $(component).click(function() {
+        $("html, body").animate({scrollTop: 0}, 1000);
+    });
+
+    $(function() {
+        // bar position at the bottom of the screen even when scaled down by silex
+        function updateBar() {
+            var winHeight = window.innerHeight
+            if(window.innerWidth > 480) {
+                var barHeight = $(component).height() * silex.scale
+                component.css({
+                    top: ((winHeight - barHeight -1) / silex.scale) + "px",
+                })
+            } else {
+                component.remove()
+            }
+        }
+        updateBar()
+        $(window).resize(updateBar)
+    })
+  }
+</script>

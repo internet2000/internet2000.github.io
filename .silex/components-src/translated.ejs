@@ -1,0 +1,10 @@
+<silex-template>
+  <% for(idx in languages) { %>
+    {% if lang == "<%- languages[idx].lang %>" %}
+      <%- languages[idx].text %>
+    {% endif %}
+  <% } %>
+</silex-template>
+<span class="prodotype-preview">
+  <%- preview %>
+</span>
