@@ -20,6 +20,7 @@ $(function(){
     });
 $('.fade-up').attr('data-aos', 'fade-up')
 $('.fade-down').attr('data-aos', 'fade-down')
+$('.fade-left').attr('data-aos', 'fade-left')
 $('.delay-300').attr('data-aos-delay', '300')
 $('.delay-500').attr('data-aos-delay', '500')
 AOS.init();
