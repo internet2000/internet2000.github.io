@@ -16,6 +16,11 @@ $(function(){
         height: (1/silex.scale * 100) + '%',
     })
     .jarallax({
-        speed: 2,
+        speed: 0.5/silex.scale,
     });
+$('.fade-up').attr('data-aos', 'fade-up')
+$('.fade-down').attr('data-aos', 'fade-down')
+$('.delay-300').attr('data-aos-delay', '300')
+$('.delay-500').attr('data-aos-delay', '500')
+AOS.init();
 });
