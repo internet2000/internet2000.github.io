@@ -22,14 +22,23 @@
             $('.borderscroll').removeClass('border');
         }
     });
-    $('.jarallax')
-    .css({
-        width: (1/silex.scale * 100) + '%',
-        height: (1/silex.scale * 100) + '%',
-    })
-    .jarallax({
-        speed: 0.5/silex.scale,
-    });
+
+   
+    var elements = $('.jarallax').jarallax({
+        //onInit: function(){ console.log('onInit', this)},
+        onCoverImage: function(){
+            var container = $('#jarallax-container-' + this.instanceID).children()[0]
+            if (container) {
+                container = $(container)
+                container.css({
+                    'width': (container.width() / silex.scale) + 'px',
+                    'height': (container.height() / silex.scale) + 'px',
+                })
+            }
+        }
+
+});
+
 $('.fade-up').attr('data-aos', 'fade-up')
 $('.fade-down').attr('data-aos', 'fade-down')
 $('.fade-left').attr('data-aos', 'fade-left')
