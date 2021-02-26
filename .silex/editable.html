@@ -47,7 +47,21 @@ AOS.init();
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+$(function() {
+    var elements = $('.jarallax').jarallax({
+        //onInit: function(){ console.log('onInit', this)},
+        onCoverImage: function(){
+            var container = $('#jarallax-container-' + this.instanceID).children()[0]
+            if (container) {
+                container = $(container)
+                container.css({
+                    'width': (container.width() / silex.scale) + 'px',
+                    'height': (container.height() / silex.scale) + 'px',
+                })
+            }
+        }
+    });
+});
 
 
 <link
