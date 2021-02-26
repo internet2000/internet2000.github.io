@@ -22,7 +22,24 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+$(function() {
+    var elements = $('.jarallax').jarallax({
+        //onInit: function(){ console.log('onInit', this)},
+        onCoverImage: function(){
+            var container = $('#jarallax-container-' + this.instanceID).children()[0]
+            if (container) {
+                container = $(container)
+                container.css({
+                    'width': (container.width() / silex.scale) + 'px',
+                    'height': (container.height() / silex.scale) + 'px',
+                })
+            }
+        }
+    });
+});
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 <style>body { opacity: 0; transition: .25s opacity ease; }</style></head>
 
 <body class="body-initial all-style enable-mobile prevent-resizable prevent-selectable editable-style silex-runtime silex-published" data-silex-type="container-element" style="" data-current-page="page-merci">
@@ -57,12 +74,12 @@
 
 
 
-<div data-silex-type="container-element" class="editable-style section-element silex-id-1614260166086-0"><div data-silex-type="container-element" class="editable-style container-element silex-id-1614260166086-1 silex-element-content website-width prevent-draggable"></div></div><section data-silex-type="container-element" class="editable-style section-element silex-id-1478366444112-1 fixed fullwidth borderscroll" title="" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1478366444112-0 website-width" title="" style=""><a href="{{ site.url }}{{ site.baseurl }}/" data-silex-type="container-element" class="editable-style container-element silex-id-1614074801022-0" style=""></a><div data-silex-type="container-element" class="editable-style container-element silex-id-1610458541428-2 hide-on-mobile" style=""><a href="#contact" data-silex-type="text-element" class="editable-style text-element silex-id-1608643161504-0 style-bouton anime" style=""><div class="silex-element-content normal"><p>estimer mon projet</p><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></a></div><div data-silex-type="text-element" class="editable-style text-element silex-id-1600854862441-7 hide-on-desktop silex-component-hamburger prevent-resizable prevent-auto-z-index style-burger-menu" style=""><div class="silex-element-content normal"><style>.hamburger-menu_1614264738904_466 {position: absolute; z-index: 20;}.silex-editor .hamburger-menu_1614264738904_466 nav {left: -9999px;}.hamburger-menu_1614264738904_466 nav ul {margin-top: 80px;}.hamburger-menu_1614264738904_466 nav {opacity: 0; position: absolute; background-color: #ededed; transition: left 1s ease, height 0s ease 1s; left: -300px; width: 300px; height: 20px;}.hamburger-menu_1614264738904_466.open nav {opacity: 1; height: 100vh; left: 0; transition: left 1s ease, height 0s ease 0s;}.hamburger-menu_1614264738904_466 .nav-container {z-index: 10; position: absolute;}.hamburger-menu_1614264738904_466.open .nav-container {}.hamburger-menu_1614264738904_466 .hamburger-btn {z-index: 20; cursor: pointer; position: absolute;}.hamburger-menu_1614264738904_466 .hamburger-btn span {display: block; width: 30px; height: 5px; margin-bottom: 3px; position: relative; background-color: #313580; border: 1px solid #ffffff; border-radius: 3px; transition: border-color 0.1s ease-in,
+<div data-silex-type="container-element" class="editable-style section-element silex-id-1614260166086-0"><div data-silex-type="container-element" class="editable-style container-element silex-id-1614260166086-1 silex-element-content website-width prevent-draggable"></div></div><section data-silex-type="container-element" class="editable-style section-element silex-id-1478366444112-1 fixed fullwidth borderscroll" title="" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1478366444112-0 website-width" title="" style=""><a href="{{ site.url }}{{ site.baseurl }}/" data-silex-type="container-element" class="editable-style container-element silex-id-1614074801022-0" style=""></a><div data-silex-type="text-element" class="editable-style text-element silex-id-1600854862441-7 hide-on-desktop silex-component-hamburger prevent-resizable prevent-auto-z-index style-burger-menu" style=""><div class="silex-element-content normal"><style>.hamburger-menu_1614337446337_836 {position: absolute; z-index: 20;}.silex-editor .hamburger-menu_1614337446337_836 nav {left: -9999px;}.hamburger-menu_1614337446337_836 nav ul {margin-top: 80px;}.hamburger-menu_1614337446337_836 nav {opacity: 0; position: absolute; background-color: #ededed; transition: left 1s ease, height 0s ease 1s; left: -300px; width: 300px; height: 20px;}.hamburger-menu_1614337446337_836.open nav {opacity: 1; height: 100vh; left: 0; transition: left 1s ease, height 0s ease 0s;}.hamburger-menu_1614337446337_836 .nav-container {z-index: 10; position: absolute;}.hamburger-menu_1614337446337_836.open .nav-container {}.hamburger-menu_1614337446337_836 .hamburger-btn {z-index: 20; cursor: pointer; position: absolute;}.hamburger-menu_1614337446337_836 .hamburger-btn span {display: block; width: 30px; height: 5px; margin-bottom: 3px; position: relative; background-color: #313580; border: 1px solid #ffffff; border-radius: 3px; transition: border-color 0.1s ease-in,
       opacity 0.1s ease-in,
       transform 0.1s ease-in,
-      background 0.1s ease-in;}.hamburger-menu_1614264738904_466.open .hamburger-btn span {border-color: rgba(255, 255, 255, 0);}.hamburger-menu_1614264738904_466 .hamburger-btn span:first-child {transform-origin: 4px -2px;}.hamburger-menu_1614264738904_466.open .hamburger-btn span:first-child {transform: rotate(45deg) translate(7px, -4px);}.hamburger-menu_1614264738904_466.open .hamburger-btn span:nth-last-child(2) {opacity: 0;}.hamburger-menu_1614264738904_466 .hamburger-btn span:nth-child(3) {transform-origin: -11px 4px;}.hamburger-menu_1614264738904_466.open .hamburger-btn span:nth-child(3) {transform: rotate(-45deg) translate(0, 12px);}</style>
+      background 0.1s ease-in;}.hamburger-menu_1614337446337_836.open .hamburger-btn span {border-color: rgba(255, 255, 255, 0);}.hamburger-menu_1614337446337_836 .hamburger-btn span:first-child {transform-origin: 4px -2px;}.hamburger-menu_1614337446337_836.open .hamburger-btn span:first-child {transform: rotate(45deg) translate(7px, -4px);}.hamburger-menu_1614337446337_836.open .hamburger-btn span:nth-last-child(2) {opacity: 0;}.hamburger-menu_1614337446337_836 .hamburger-btn span:nth-child(3) {transform-origin: -11px 4px;}.hamburger-menu_1614337446337_836.open .hamburger-btn span:nth-child(3) {transform: rotate(-45deg) translate(0, 12px);}</style>
 <!-- inspired by https://codepen.io/erikterwan/pen/EVzeRP -->
-<div class="hamburger-menu_1614264738904_466 closed">
+<div class="hamburger-menu_1614337446337_836 closed">
     <div class="hamburger-btn ">
       <span></span>
       <span></span>
@@ -89,26 +106,26 @@
   var isOpen = false;
   function close() {
     isOpen = false;
-    $('.hamburger-menu_1614264738904_466').removeClass('open');
-    $('.hamburger-menu_1614264738904_466').addClass('closed');
+    $('.hamburger-menu_1614337446337_836').removeClass('open');
+    $('.hamburger-menu_1614337446337_836').addClass('closed');
   }
   function open() {
     isOpen = true;
-    $('.hamburger-menu_1614264738904_466').addClass('open');
-    $('.hamburger-menu_1614264738904_466').removeClass('closed');
+    $('.hamburger-menu_1614337446337_836').addClass('open');
+    $('.hamburger-menu_1614337446337_836').removeClass('closed');
   }
   function toggle() {
     if(isOpen) close();
     else open();
   }
-  var silexElement = $('.hamburger-menu_1614264738904_466').closest('.editable-style');
+  var silexElement = $('.hamburger-menu_1614337446337_836').closest('.editable-style');
   function move(data) {
     var offset = silexElement.offset();
-    $('.hamburger-menu_1614264738904_466 .nav-container').css({
+    $('.hamburger-menu_1614337446337_836 .nav-container').css({
       'transform': 'translate(' + (data.scrollLeft - (offset.left/data.scale)) + 'px, ' + (data.scrollTop - (offset.top/data.scale)) + 'px)'
     });
   }
-  $('.hamburger-menu_1614264738904_466 .hamburger-btn').click(function() { toggle(); });
+  $('.hamburger-menu_1614337446337_836 .hamburger-btn').click(function() { toggle(); });
   $(document).on('silex.scroll silex.resize', function(e) {
     close();
     move(window.silex);
@@ -116,45 +133,26 @@
   close();
 })();
 </script>
-</div></div></div></section><section data-silex-type="container-element" class="editable-style section-element silex-id-1597062960328-6 page-home paged-element page-404 page-merci paged-element-visible" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1597062960328-7 silex-element-content prevent-draggable hero website-width" style=""><div data-silex-type="text-element" class="editable-style text-element silex-id-1610458935499-3 style-h1" style=""><div class="silex-element-content normal"><h1>Solutions digitales</h1></div></div><div data-silex-type="text-element" class="editable-style text-element silex-id-1614261168259-0 style-h1" style=""><div class="silex-element-content normal"><h1><b>Belles et intelligentes.</b></h1></div></div><div data-silex-type="container-element" class="editable-style container-element silex-id-1612272617286-4 my-element" style=""></div><div data-silex-type="container-element" class="editable-style container-element silex-id-1610459255018-5" style=""><a href="#contact" data-silex-type="text-element" class="editable-style text-element silex-id-1610459255018-6 style-bouton anime" style=""><div class="silex-element-content normal"><p>obtenir un devis</p></div></a></div></div><div data-silex-type="container-element" class="editable-style container-element silex-id-1609857333118-0 fixed hide-on-mobile" style=""><a href="https://instagram.com/internet2ooo?r=nametag" data-silex-type="container-element" class="editable-style container-element silex-id-1610620175339-1" style=""></a></div><div data-silex-type="text-element" class="editable-style text-element silex-id-1613057217898-0 silex-component-back-to-top fixed style-back-to-top" style=""><div class="silex-element-content normal">⇧
+</div></div></div></section><div data-silex-type="container-element" class="editable-style section-element silex-id-1608982886521-1 page-merci paged-element paged-element-visible"><div data-silex-type="container-element" class="editable-style container-element silex-id-1608982886522-2 silex-element-content website-width prevent-draggable"><a href="{{ site.url }}{{ site.baseurl }}/" data-silex-type="text-element" class="editable-style text-element silex-id-1608982874459-0 style-footer" style=""><div class="silex-element-content normal"><p>Merci pour votre message ! nous vous répondons bien vite.</p><p>&nbsp; <br>Pour revenir sur Internet 2000, <b>c'est par ici !</b></p></div></a><a href="{{ site.url }}{{ site.baseurl }}/" data-silex-type="text-element" class="editable-style text-element silex-id-1614348383481-10 style-bouton anime ovale" style=""><div class="silex-element-content normal"><p>l'agence du futur</p></div></a></div></div><div data-silex-type="container-element" class="editable-style section-element silex-id-1614267830901-0"><div data-silex-type="container-element" class="editable-style container-element silex-id-1614267830901-1 silex-element-content website-width prevent-draggable"></div></div><div data-silex-type="container-element" class="editable-style section-element silex-id-1610546653486-28" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1610546653487-29 silex-element-content website-width prevent-draggable" style=""><div data-silex-type="text-element" class="editable-style text-element silex-id-1610546769083-32 style-home-blanc" style=""><div class="silex-element-content normal"><h2>Parlons-nous !</h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div data-silex-type="html-element" class="editable-style html-element silex-id-1610983781173-0 style-etude-de-cas" style=""><div class="silex-element-content"><form netlify="" name="contact" class="contact" action="/merci" method="post"><input type="hidden" name="form-name" value="contact">
 
-<script type="text/javascript">
-  if($('body').hasClass('silex-runtime')) {
-    var component = $(document.scripts[document.scripts.length - 1]).closest('.editable-style')
-    $('body').append(component)
-    component.hide()
-    component.css({
-      position: 'absolute',
-      cursor: 'pointer',
-    })
-    $(window).scroll(function() {
-        if ($(this).scrollTop()) {
-            component.fadeIn();
-        } else {
-            component.fadeOut();
-        }
-    });
+  <div>
+    <label for="field1">Prénom, Nom</label>
+    <input type="text" required="" id="field1" name="field1" placeholder="Votre nom">
+  </div>
 
-    $(component).click(function() {
-        $("html, body").animate({scrollTop: 0}, 1000);
-    });
 
-    $(function() {
-        // bar position at the bottom of the screen even when scaled down by silex
-        function updateBar() {
-            var winHeight = window.innerHeight
-            if(window.innerWidth > 480) {
-                var barHeight = $(component).height() * silex.scale
-                component.css({
-                    top: ((winHeight - barHeight -1) / silex.scale) + "px",
-                })
-            } else {
-                component.remove()
-            }
-        }
-        updateBar()
-        $(window).resize(updateBar)
-    })
-  }
-</script>
-</div></div></section><div data-silex-type="container-element" class="editable-style section-element silex-id-1608982886521-1 page-merci paged-element paged-element-visible"><div data-silex-type="container-element" class="editable-style container-element silex-id-1608982886522-2 silex-element-content website-width prevent-draggable"><a href="{{ site.url }}{{ site.baseurl }}/" data-silex-type="text-element" class="editable-style text-element silex-id-1608982874459-0 style-footer" style=""><div class="silex-element-content normal"><p><b>Merci pour votre message !</b> nous vous répondons bien vite. <br><b>&gt;&gt; Retour au site INTERNET 2000 &lt;&lt;</b></p></div></a></div></div><div data-silex-type="container-element" class="editable-style section-element silex-id-1614267830901-0"><div data-silex-type="container-element" class="editable-style container-element silex-id-1614267830901-1 silex-element-content website-width prevent-draggable"></div></div><div data-silex-type="container-element" class="editable-style section-element silex-id-1610546653486-28" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1610546653487-29 silex-element-content website-width prevent-draggable" style=""><div data-silex-type="text-element" class="editable-style text-element silex-id-1610546769083-32 style-home-blanc" style=""><div class="silex-element-content normal"><h2>Parlons-nous !</h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><a href="https://instagram.com/internet2ooo?r=nametag" data-silex-type="container-element" class="editable-style container-element silex-id-1610620335936-3" style=""></a></div></div><section data-silex-type="container-element" class="editable-style section-element silex-id-1603119234751-4" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1603119234751-5 silex-element-content website-width prevent-draggable" style=""></div></section></body></html>
+  <div>
+    <label for="field2">Votre mail</label>
+    <input type="text" required="" id="field2" name="field2" placeholder="votre@email.com">
+  </div>
+
+
+  <div class="fill-vertical">
+    <label for="field3">Votre message</label>
+    <textarea rows="15" required="" id="field3" name="field3" placeholder="Bonjour, ..."></textarea>
+  </div>
+
+  <input type="submit" value="Envoyer" class="button">
+</form>
+
+<style>form * {color: white; font-size: 21px; font-family: 'Barlow Condensed', 'arial narrow', arial, sans-serif;}input, textarea {width: 100%; padding: 10px; margin-bottom: 20px; border: none;}label {width: 1200px;}.button {background: transparent; border: 3px solid white; border-radius: 50%; width: 233px; height: 81px; text-transform: uppercase; letter-spacing: 1.5px; font-size: 21px;}</style></div></div><a href="https://instagram.com/internet2ooo?r=nametag" data-silex-type="container-element" class="editable-style container-element silex-id-1610620335936-3" style=""></a></div></div><section data-silex-type="container-element" class="editable-style section-element silex-id-1603119234751-4" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1603119234751-5 silex-element-content website-width prevent-draggable" style=""></div></section></body></html>
