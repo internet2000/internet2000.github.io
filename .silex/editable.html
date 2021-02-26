@@ -22,9 +22,8 @@
             $('.borderscroll').removeClass('border');
         }
     });
-
-   
-    var elements = $('.jarallax').jarallax({
+        var elements = $('.jarallax').jarallax({
+         speed: 0.5/silex.scale,
         //onInit: function(){ console.log('onInit', this)},
         onCoverImage: function(){
             var container = $('#jarallax-container-' + this.instanceID).children()[0]
@@ -37,6 +36,7 @@
             }
         }
 });
+
 
 $('.fade-up').attr('data-aos', 'fade-up')
 $('.fade-down').attr('data-aos', 'fade-down')
