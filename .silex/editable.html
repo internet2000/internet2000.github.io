@@ -37,6 +37,7 @@
             }
         }
         })
+    if($(window).height() > 480) {
     var initialMinHeight = $('.hero-section').height()
     function unscale() {
         $('.hero-section').css({
@@ -45,7 +46,7 @@
     }
     $(window).on('resize', unscale)
     unscale()
-
+    }
 });
 
 /*
