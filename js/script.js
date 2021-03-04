@@ -25,7 +25,7 @@ $(function(){
             }
         }
     })
-    if($(window).height() > 480) {
+    if($(window).width() > 480) {
         var initialMinHeight = $('.hero-section').height()
         function unscale() {
             $('.hero-section').css({
@@ -49,7 +49,8 @@ $(function(){
  * animation widget from here: https://github.com/silexlabs/Silex/issues/443
  */
 $(function() {
-	var OFFSET = $('.hero-section, [data-prevent-scale-y]').height() * (1 - silex.scale) / 2 // this is because of the hero section which is not resizeable
+    if($(window).width() > 480) {
+	var OFFSET = $('.hero-section, [data-prevent-scale-y]').height() * (1 - silex.scale) / 2 // this is because of the hero section which is not resizeable 
 	var win = $(window)
 	var size = {
 		h: win.height()
@@ -126,4 +127,6 @@ $(function() {
 	$('.from-bottom').each(function() {
 		sr.reveal(this, { origin:  'bottom', scale: getScale(this), delay: getDelay(this), distance: getDistance(this), viewOffset: getOffset(this)});
 	})
+    }
 })
+
