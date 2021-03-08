@@ -6,15 +6,24 @@
     <!-- leave this for stats and Silex version check -->
     <meta name="generator" content="Silex v2.2.12">
     <!-- End of generator meta tag -->
-    <script type="text/javascript" src="https://design.stastic.net/static/2.11/jquery.js" data-silex-static=""></script>
-    <script type="text/javascript" src="https://design.stastic.net/static/2.11/jquery-ui.js" data-silex-static="" data-silex-remove-publish=""></script>
-    <script type="text/javascript" src="https://design.stastic.net/static/2.11/pageable.js" data-silex-static="" data-silex-remove-publish=""></script>
-    <script type="text/javascript" src="https://design.stastic.net/static/2.11/front-end.js" data-silex-static=""></script>
-    <link rel="stylesheet" href="https://design.stastic.net/static/2.11/normalize.css" data-silex-static="">
-    <link rel="stylesheet" href="https://design.stastic.net/static/2.11/front-end.css" data-silex-static="">
+    <script type="text/javascript" src="http://localhost:6805/static/2.11/jquery.js" data-silex-static=""></script>
+    <script type="text/javascript" src="http://localhost:6805/static/2.11/jquery-ui.js" data-silex-static="" data-silex-remove-publish=""></script>
+    <script type="text/javascript" src="http://localhost:6805/static/2.11/pageable.js" data-silex-static="" data-silex-remove-publish=""></script>
+    <script type="text/javascript" src="http://localhost:6805/static/2.11/front-end.js" data-silex-static=""></script>
+    <link rel="stylesheet" href="http://localhost:6805/static/2.11/normalize.css" data-silex-static="">
+    <link rel="stylesheet" href="http://localhost:6805/static/2.11/front-end.css" data-silex-static="">
 
     <style type="text/css" class="silex-style">body, html {overflow-x: hidden;}.editable-style.section-element {margin-top: 0;}.borderscroll.border {border-bottom: 1px solid #303880; top: 0;}.fullwidth {width: 100%;}body.silex-runtime {scroll-behavior: smooth;}html {scroll-behavior: smooth;}.ovale {border: 3px solid; border-radius: 50%;}div.ovale-blanc, a.ovale-blanc {border: 3px solid white; border-radius: 50%;}@media (min-width:481px) {section .hero {min-height: 95vh;}}article img {max-width: 413px; display: inline-block; max-height: 413px; margin: auto; border-width: 5px 5px 5px 5px; border-style: solid; border-color: rgba(49,53,128,1); margin-top: 100px;}article {display: flex; justify-items: center; align-items: center;}@media (max-width: 480px) {article {flex-wrap: wrap;}}article .insta-content {margin-left: 50px;}.img-silexlabs {background-position-y: 80% !important;}@media (max-width: 480px) {body.enable-mobile .editable-style.section-element > .silex-element-content {padding: 0;}article img {margin: -15px;}article .insta-content {margin-left: 0px;}}facebook {position: fixed;}</style>
     <script type="text/javascript" class="silex-script">$(function(){
+    // optimization of the fixed elements
+    if(silex.scale === 1) {
+        $('.fixed').removeClass('fixed').css({
+            'position': 'fixed'
+            , 'zIndex': 999
+            , 'transform': ''
+        })
+    }
+
     $(window).scroll(function(){
         if($(this).scrollTop()>36){
             $('.borderscroll').addClass('border');
@@ -46,14 +55,6 @@
         }
         $(window).on('resize', unscale)
         unscale()
-    }
-
-    // optimization of the fixed elements
-    if(silex.scale === 1) {
-        $('.fixed').removeClass('fixed').css({
-            'position': 'fixed'
-            , 'zIndex': 999
-        })
     }
 });
 
@@ -200,12 +201,12 @@ $(function() {
 
 
 
-<div data-silex-type="container-element" class="editable-style section-element silex-id-1614260166086-0 hide-on-mobile" data-silex-id="silex-id-1614260166086-0"><div data-silex-type="container-element" class="editable-style container-element silex-id-1614260166086-1 silex-element-content website-width prevent-draggable" data-silex-id="silex-id-1614260166086-1" style=""></div></div><section data-silex-type="container-element" class="editable-style section-element silex-id-1478366444112-1 fixed fullwidth borderscroll" data-silex-id="silex-id-1478366444112-1" title="" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1478366444112-0 website-width" data-silex-id="silex-id-1478366444112-0" title="" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1614074801022-0" data-silex-id="silex-id-1614074801022-0" style="" data-silex-href="{{ site.url }}{{ site.baseurl }}/"></div><div data-silex-type="text-element" class="editable-style text-element silex-id-1608643161504-0 style-bouton anime ovale page-home paged-element hide-on-mobile" data-silex-id="silex-id-1608643161504-0" style="" data-silex-href="#contact"><div class="silex-element-content normal"><p>estimer mon projet</p><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div data-silex-type="text-element" class="editable-style text-element silex-id-1600854862441-7 hide-on-desktop silex-component-hamburger prevent-resizable prevent-auto-z-index style-burger-menu" data-silex-id="silex-id-1600854862441-7" style=""><div class="silex-element-content normal"><style>.hamburger-menu_1615201286085_353 {position: absolute; z-index: 20;}.silex-editor .hamburger-menu_1615201286085_353 nav {left: -9999px;}.hamburger-menu_1615201286085_353 nav ul {margin-top: 80px;}.hamburger-menu_1615201286085_353 nav {opacity: 0; position: absolute; background-color: #ededed; transition: left 1s ease, height 0s ease 1s; left: -300px; width: 300px; height: 20px;}.hamburger-menu_1615201286085_353.open nav {opacity: 1; height: 100vh; left: 0; transition: left 1s ease, height 0s ease 0s;}.hamburger-menu_1615201286085_353 .nav-container {z-index: 10; position: absolute;}.hamburger-menu_1615201286085_353.open .nav-container {}.hamburger-menu_1615201286085_353 .hamburger-btn {z-index: 20; cursor: pointer; position: absolute;}.hamburger-menu_1615201286085_353 .hamburger-btn span {display: block; width: 30px; height: 5px; margin-bottom: 3px; position: relative; background-color: #313580; border: 1px solid #ffffff; border-radius: 3px; transition: border-color 0.1s ease-in,
+<div data-silex-type="container-element" class="editable-style section-element silex-id-1614260166086-0 hide-on-mobile" data-silex-id="silex-id-1614260166086-0"><div data-silex-type="container-element" class="editable-style container-element silex-id-1614260166086-1 silex-element-content website-width prevent-draggable" data-silex-id="silex-id-1614260166086-1" style=""></div></div><section data-silex-type="container-element" class="editable-style section-element silex-id-1478366444112-1 fixed fullwidth borderscroll" data-silex-id="silex-id-1478366444112-1" title="" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1478366444112-0 website-width" data-silex-id="silex-id-1478366444112-0" title="" style=""><div data-silex-type="container-element" class="editable-style container-element silex-id-1614074801022-0" data-silex-id="silex-id-1614074801022-0" style="" data-silex-href="{{ site.url }}{{ site.baseurl }}/"></div><div data-silex-type="text-element" class="editable-style text-element silex-id-1608643161504-0 style-bouton anime ovale page-home paged-element hide-on-mobile" data-silex-id="silex-id-1608643161504-0" style="" data-silex-href="#contact"><div class="silex-element-content normal"><p>estimer mon projet</p><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div data-silex-type="text-element" class="editable-style text-element silex-id-1600854862441-7 hide-on-desktop silex-component-hamburger prevent-resizable prevent-auto-z-index style-burger-menu" data-silex-id="silex-id-1600854862441-7" style=""><div class="silex-element-content normal"><style>.hamburger-menu_1615215570828_908 {position: absolute; z-index: 20;}.silex-editor .hamburger-menu_1615215570828_908 nav {left: -9999px;}.hamburger-menu_1615215570828_908 nav ul {margin-top: 80px;}.hamburger-menu_1615215570828_908 nav {opacity: 0; position: absolute; background-color: #ededed; transition: left 1s ease, height 0s ease 1s; left: -300px; width: 300px; height: 20px;}.hamburger-menu_1615215570828_908.open nav {opacity: 1; height: 100vh; left: 0; transition: left 1s ease, height 0s ease 0s;}.hamburger-menu_1615215570828_908 .nav-container {z-index: 10; position: absolute;}.hamburger-menu_1615215570828_908.open .nav-container {}.hamburger-menu_1615215570828_908 .hamburger-btn {z-index: 20; cursor: pointer; position: absolute;}.hamburger-menu_1615215570828_908 .hamburger-btn span {display: block; width: 30px; height: 5px; margin-bottom: 3px; position: relative; background-color: #313580; border: 1px solid #ffffff; border-radius: 3px; transition: border-color 0.1s ease-in,
       opacity 0.1s ease-in,
       transform 0.1s ease-in,
-      background 0.1s ease-in;}.hamburger-menu_1615201286085_353.open .hamburger-btn span {border-color: rgba(255, 255, 255, 0);}.hamburger-menu_1615201286085_353 .hamburger-btn span:first-child {transform-origin: 4px -2px;}.hamburger-menu_1615201286085_353.open .hamburger-btn span:first-child {transform: rotate(45deg) translate(7px, -4px);}.hamburger-menu_1615201286085_353.open .hamburger-btn span:nth-last-child(2) {opacity: 0;}.hamburger-menu_1615201286085_353 .hamburger-btn span:nth-child(3) {transform-origin: -11px 4px;}.hamburger-menu_1615201286085_353.open .hamburger-btn span:nth-child(3) {transform: rotate(-45deg) translate(0, 12px);}</style>
+      background 0.1s ease-in;}.hamburger-menu_1615215570828_908.open .hamburger-btn span {border-color: rgba(255, 255, 255, 0);}.hamburger-menu_1615215570828_908 .hamburger-btn span:first-child {transform-origin: 4px -2px;}.hamburger-menu_1615215570828_908.open .hamburger-btn span:first-child {transform: rotate(45deg) translate(7px, -4px);}.hamburger-menu_1615215570828_908.open .hamburger-btn span:nth-last-child(2) {opacity: 0;}.hamburger-menu_1615215570828_908 .hamburger-btn span:nth-child(3) {transform-origin: -11px 4px;}.hamburger-menu_1615215570828_908.open .hamburger-btn span:nth-child(3) {transform: rotate(-45deg) translate(0, 12px);}</style>
 <!-- inspired by https://codepen.io/erikterwan/pen/EVzeRP -->
-<div class="hamburger-menu_1615201286085_353 closed">
+<div class="hamburger-menu_1615215570828_908 closed">
     <div class="hamburger-btn ">
       <span></span>
       <span></span>
@@ -230,26 +231,26 @@ $(function() {
   var isOpen = false;
   function close() {
     isOpen = false;
-    $('.hamburger-menu_1615201286085_353').removeClass('open');
-    $('.hamburger-menu_1615201286085_353').addClass('closed');
+    $('.hamburger-menu_1615215570828_908').removeClass('open');
+    $('.hamburger-menu_1615215570828_908').addClass('closed');
   }
   function open() {
     isOpen = true;
-    $('.hamburger-menu_1615201286085_353').addClass('open');
-    $('.hamburger-menu_1615201286085_353').removeClass('closed');
+    $('.hamburger-menu_1615215570828_908').addClass('open');
+    $('.hamburger-menu_1615215570828_908').removeClass('closed');
   }
   function toggle() {
     if(isOpen) close();
     else open();
   }
-  var silexElement = $('.hamburger-menu_1615201286085_353').closest('.editable-style');
+  var silexElement = $('.hamburger-menu_1615215570828_908').closest('.editable-style');
   function move(data) {
     var offset = silexElement.offset();
-    $('.hamburger-menu_1615201286085_353 .nav-container').css({
+    $('.hamburger-menu_1615215570828_908 .nav-container').css({
       'transform': 'translate(' + (data.scrollLeft - (offset.left/data.scale)) + 'px, ' + (data.scrollTop - (offset.top/data.scale)) + 'px)'
     });
   }
-  $('.hamburger-menu_1615201286085_353 .hamburger-btn').click(function() { toggle(); });
+  $('.hamburger-menu_1615215570828_908 .hamburger-btn').click(function() { toggle(); });
   $(document).on('silex.scroll silex.resize', function(e) {
     close();
     move(window.silex);
