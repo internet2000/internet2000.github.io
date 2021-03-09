@@ -3,6 +3,15 @@
     window.silex = window.silex || {}
     window.silex.data = {"site":{"width":1280},"pages":[{"id":"page-home","displayName":"home","link":{"linkType":"LinkTypePage","href":"#!page-home"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false},{"id":"page-404","displayName":"404","link":{"linkType":"LinkTypePage","href":"#!page-404"},"canDelete":true,"canRename":true,"canMove":true,"canProperties":true,"opened":false},{"id":"page-merci","displayName":"merci","link":{"linkType":"LinkTypePage","href":"#!page-merci"},"canDelete":true,"canRename":true,"canMove":true,"canProperties":true,"opened":false}]}
 $(function(){
+    // optimization of the fixed elements
+    if(silex.scale === 1) {
+        $('.fixed').removeClass('fixed').css({
+            'position': 'fixed'
+            , 'zIndex': 999
+            , 'transform': ''
+        })
+    }
+
     $(window).scroll(function(){
         if($(this).scrollTop()>36){
             $('.borderscroll').addClass('border');
@@ -34,14 +43,6 @@ $(function(){
         }
         $(window).on('resize', unscale)
         unscale()
-    }
-
-    // optimization of the fixed elements
-    if(silex.scale === 1) {
-        $('.fixed').removeClass('fixed').css({
-            'position': 'fixed'
-            , 'zIndex': 999
-        })
     }
 });
 
