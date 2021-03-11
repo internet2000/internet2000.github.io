@@ -1,5 +1,5 @@
 {
-  "name": "cousettes-11ty",
+  "name": "internet2000",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,14 @@
   "scripts": {
     "start": "LOCAL=true eleventy --serve --quiet",
     "start:debug": "DEBUG=Eleventy* npm start",
+    "build:components": "mkdir -p .silex/components && prodotype .silex/components-src/ .silex/components",
     "build": "eleventy && eleventy"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "prodotype": "^1.0.23"
   },
   "dependencies": {
     "@quasibit/eleventy-plugin-sitemap": "^2.0.2"
