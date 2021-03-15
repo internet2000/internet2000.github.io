@@ -131,3 +131,23 @@ $(function() {
     }
 })
 
+$(function() {
+    // the slideshow must be autoplay
+    $('.unslider > div').each(function() {
+        // stop on page load
+        var data = $(this).data('unslider').stop()
+    })
+    $('.unslider > div').hover(function() {
+        // start on hover
+        var data = $(this).data('unslider')
+        data.next()
+        data.start()
+    }, function() {
+        // stop on roll out
+        var data = $(this).data('unslider')
+        data.stop()
+        setTimeout(function() {
+            data.stop()
+        }, 1100) // this number must be greater than the delay of the slideshow
+    })
+})
