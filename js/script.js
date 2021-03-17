@@ -131,7 +131,11 @@ $(function() {
     }
 })
 
+/*
+ * pour que le diaporama se déclaenche automatiquement sur mobile
+ */
 $(function() {
+if($(window).width() > 480) {
     // the slideshow must be autoplay
     $('.unslider > div').each(function() {
         // stop on page load
@@ -150,4 +154,6 @@ $(function() {
             data.stop()
         }, 1100) // this number must be greater than the delay of the slideshow
     })
+}
 })
+
