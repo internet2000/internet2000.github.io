@@ -46,12 +46,40 @@ $(function(){
     }
 });
 
+
+
+/*
+ * pour que le diaporama se déclaenche automatiquement sur mobile
+ */
+$(function() {
+if($(window).width() > 480) {
+    // the slideshow must be autoplay
+    $('.unslider > div').each(function() {
+        // stop on page load
+        var data = $(this).data('unslider').stop()
+    })
+    $('.unslider > div').hover(function() {
+        // start on hover
+        var data = $(this).data('unslider')
+        data.next()
+        data.start()
+    }, function() {
+        // stop on roll out
+        var data = $(this).data('unslider')
+        data.stop()
+        setTimeout(function() {
+            data.stop()
+        }, 1100) // this number must be greater than the delay of the slideshow
+    })
+}
+})
+
 /*
  * animation widget from here: https://github.com/silexlabs/Silex/issues/443
  */
 $(function() {
-    if($(window).width() > 480) {
-	var OFFSET = $('.hero-section, [data-prevent-scale-y]').height() * (1 - silex.scale) / 2 // this is because of the hero section which is not resizeable 
+    if(silex.scale === 1) {
+	var OFFSET = $('.hero-section, [data-prevent-scale-y]').height() * (1 - silex.scale) / 2 // this is because of the hero section which is not resizeable
 	var win = $(window)
 	var size = {
 		h: win.height()
@@ -129,39 +157,14 @@ $(function() {
 		sr.reveal(this, { origin:  'bottom', scale: getScale(this), delay: getDelay(this), distance: getDistance(this), viewOffset: getOffset(this)});
 	})
     }
-})
-
-/*
- * pour que le diaporama se déclaenche automatiquement sur mobile
- */
-$(function() {
-if($(window).width() > 480) {
-    // the slideshow must be autoplay
-    $('.unslider > div').each(function() {
-        // stop on page load
-        var data = $(this).data('unslider').stop()
-    })
-    $('.unslider > div').hover(function() {
-        // start on hover
-        var data = $(this).data('unslider')
-        data.next()
-        data.start()
-    }, function() {
-        // stop on roll out
-        var data = $(this).data('unslider')
-        data.stop()
-        setTimeout(function() {
-            data.stop()
-        }, 1100) // this number must be greater than the delay of the slideshow
-    })
-}
-})
-
     ////////////////////////////////////////
     // FIX the height of the website as https://unpkg.com/scrollreveal is messing with it
     function resize() {
         $('body').css('max-height', Math.round(window.innerHeight * silex.scale))
     }
     $(window).resize(resize)
-    setTimeout(function() { resize() }, 0)
+    // setTimeout(function() { resize() }, 0)
+    resize()
     ////////////////////////////////////////
+})
+
