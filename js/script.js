@@ -160,9 +160,8 @@ if($(window).width() > 480) {
     ////////////////////////////////////////
     // FIX the height of the website as https://unpkg.com/scrollreveal is messing with it
     function resize() {
-        console.log(window.innerHeight * silex.scale)
         $('body').css('max-height', Math.round(window.innerHeight * silex.scale))
     }
     $(window).resize(resize)
-    resize()
+    setTimeout(function() { resize() }, 0)
     ////////////////////////////////////////
