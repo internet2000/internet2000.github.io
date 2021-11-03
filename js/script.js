@@ -1,7 +1,7 @@
 
 
     window.silex = window.silex || {}
-    window.silex.data = {"site":{"width":1280},"pages":[{"id":"page-home","displayName":"home","link":{"linkType":"LinkTypePage","href":"#!page-home"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false},{"id":"page-404","displayName":"404","link":{"linkType":"LinkTypePage","href":"#!page-404"},"canDelete":true,"canRename":true,"canMove":true,"canProperties":true,"opened":false},{"id":"page-merci","displayName":"merci","link":{"linkType":"LinkTypePage","href":"#!page-merci"},"canDelete":true,"canRename":true,"canMove":true,"canProperties":true,"opened":false}]}
+    window.silex.data = {"site":{"width":1280},"pages":[{"id":"page-home","displayName":"home","link":{"linkType":"LinkTypePage","href":"#!page-home"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false},{"id":"page-agence-responsable","displayName":"Agence Responsable","link":{"linkType":"LinkTypePage","href":"#!page-agence-responsable"},"canDelete":true,"canRename":true,"canMove":true,"canProperties":true,"opened":false},{"id":"page-sales-force-pardot-hubspot","displayName":"Sales Force Pardot & Hubspot","link":{"linkType":"LinkTypePage","href":"#!page-sales-force-pardot-hubspot"},"canDelete":true,"canRename":true,"canMove":true,"canProperties":true,"opened":false},{"id":"page-404","displayName":"404","link":{"linkType":"LinkTypePage","href":"#!page-404"},"canDelete":true,"canRename":true,"canMove":true,"canProperties":true,"opened":false},{"id":"page-merci","displayName":"merci","link":{"linkType":"LinkTypePage","href":"#!page-merci"},"canDelete":true,"canRename":true,"canMove":true,"canProperties":true,"opened":false}]}
 $(function(){
     // optimization of the fixed elements
     if(silex.scale === 1) {
@@ -46,12 +46,40 @@ $(function(){
     }
 });
 
+
+
+/*
+ * pour que le diaporama se déclaenche automatiquement sur mobile
+ */
+$(function() {
+if($(window).width() > 480) {
+    // the slideshow must be autoplay
+    $('.unslider > div').each(function() {
+        // stop on page load
+        var data = $(this).data('unslider').stop()
+    })
+    $('.unslider > div').hover(function() {
+        // start on hover
+        var data = $(this).data('unslider')
+        data.next()
+        data.start()
+    }, function() {
+        // stop on roll out
+        var data = $(this).data('unslider')
+        data.stop()
+        setTimeout(function() {
+            data.stop()
+        }, 1100) // this number must be greater than the delay of the slideshow
+    })
+}
+})
+
 /*
  * animation widget from here: https://github.com/silexlabs/Silex/issues/443
  */
 $(function() {
-    if($(window).width() > 480) {
-	var OFFSET = $('.hero-section, [data-prevent-scale-y]').height() * (1 - silex.scale) / 2 // this is because of the hero section which is not resizeable 
+    if(silex.scale === 1) {
+	var OFFSET = $('.hero-section, [data-prevent-scale-y]').height() * (1 - silex.scale) / 2 // this is because of the hero section which is not resizeable
 	var win = $(window)
 	var size = {
 		h: win.height()
@@ -129,25 +157,14 @@ $(function() {
 		sr.reveal(this, { origin:  'bottom', scale: getScale(this), delay: getDelay(this), distance: getDistance(this), viewOffset: getOffset(this)});
 	})
     }
+    ////////////////////////////////////////
+    // FIX the height of the website as https://unpkg.com/scrollreveal is messing with it
+    function resize() {
+        $('body').css('max-height', Math.round(window.innerHeight * silex.scale))
+    }
+    $(window).resize(resize)
+    // setTimeout(function() { resize() }, 0)
+    resize()
+    ////////////////////////////////////////
 })
 
-$(function() {
-    // the slideshow must be autoplay
-    $('.unslider > div').each(function() {
-        // stop on page load
-        var data = $(this).data('unslider').stop()
-    })
-    $('.unslider > div').hover(function() {
-        // start on hover
-        var data = $(this).data('unslider')
-        data.next()
-        data.start()
-    }, function() {
-        // stop on roll out
-        var data = $(this).data('unslider')
-        data.stop()
-        setTimeout(function() {
-            data.stop()
-        }, 1100) // this number must be greater than the delay of the slideshow
-    })
-})
