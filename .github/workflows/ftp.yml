@@ -1,0 +1,29 @@
+name: Eleventy Build
+on: [push]
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run build
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+          URL: ${{ secrets.URL }}
+      - name: FTP transfer
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ${{ secrets.ftp_host }}
+          port: ${{ secrets.ftp_port }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          protocol: ${{ secrets.ftp_protocol }}
+          server-dir: /domains/internet2000.net/public_html
