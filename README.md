@@ -1,3 +1,5 @@
+[![Ftp deployment](https://github.com/internet2000/internet2000.github.io/actions/workflows/ftp.yml/badge.svg)](https://github.com/internet2000/internet2000.github.io/actions/workflows/ftp.yml)
+
 Here is the source code of the website [internet2000.net](https://internet2000.net), developed by [INTERNET 2000 French agency](https://internet2000.net)
 
 Tools we use
