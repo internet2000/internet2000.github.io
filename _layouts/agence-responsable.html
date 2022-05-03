@@ -63,70 +63,7 @@
 
 
 
-<section class="editable-style section-element silex-id-1614260166086-0 hide-on-mobile"><div class="editable-style container-element silex-id-1614260166086-1 silex-element-content website-width prevent-draggable"></div></section><section class="editable-style section-element silex-id-1478366444112-1 fixed fullwidth borderscroll"><div class="editable-style container-element silex-id-1478366444112-0 website-width"><a class="editable-style container-element silex-id-1614074801022-0" href="{{ site.url }}{{ site.baseurl }}/"></a><a class="editable-style text-element silex-id-1608643161504-0 style-bouton anime ovale hide-on-mobile" href="#contact"><div class="silex-element-content normal"><p>contactez-nous<br></p><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></a><div class="editable-style text-element silex-id-1600854862441-7 hide-on-desktop silex-component-hamburger prevent-resizable prevent-auto-z-index style-carbon-score"><div class="silex-element-content normal">
-<!-- inspired by https://codepen.io/erikterwan/pen/EVzeRP -->
-<div class="hamburger-menu_1649851700048_299 closed">
-    <div class="hamburger-btn ">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="nav-container">
-      <div class="prevent-scale">
-        <nav class="">
-            <ul>
-            
-                <li><a href="{{ site.url }}{{ site.baseurl }}/" title="Accueil">Accueil</a></li>
-            
-                <li><a href="{{ site.url }}{{ site.baseurl }}/agence-responsable/" title="Agence Responsable">agence responsable</a></li>
-            
-                <li><a href="#contact" title="Contact">Contactez-nous</a></li>
-            
-            </ul>
-        </nav>
-      </div>
-  </div>
-</div>
-<script>
-(function() {
-  var isOpen = false;
-  function close() {
-    isOpen = false;
-    document.querySelector('.hamburger-menu_1649851700048_299').classList.remove('open');
-    document.querySelector('.hamburger-menu_1649851700048_299').classList.add('closed');
-  }
-  function open() {
-    isOpen = true;
-    document.querySelector('.hamburger-menu_1649851700048_299').classList.add('open');
-    document.querySelector('.hamburger-menu_1649851700048_299').classList.remove('closed');
-  }
-  function toggle() {
-    if(isOpen) close();
-    else open();
-  }
-  function scrollOrResize() {
-    close();
-    move();
-  }
-  var silexElement = document.querySelector('.hamburger-menu_1649851700048_299').closest('.editable-style');
-  function move() {
-    var data = window.silex
-    var rect = silexElement.getBoundingClientRect();
-    var offset = {
-      top: rect.top + data.scrollTop,
-      left: rect.left + data.scrollLeft,
-    };
-    var container = document.querySelector('.hamburger-menu_1649851700048_299 .nav-container');
-    container.style.transform = 'translate(' + (data.scrollLeft - (offset.left/data.scale)) + 'px, ' + (data.scrollTop - (offset.top/data.scale)) + 'px)';
-  }
-  document.querySelector('.hamburger-menu_1649851700048_299 .hamburger-btn').addEventListener('click', function() { toggle(); });
-  document.addEventListener('resize', scrollOrResize);
-  document.addEventListener('scroll', scrollOrResize);
-  scrollOrResize()
-  setTimeout(() => scrollOrResize(), 0)
-})();
-</script>
-</div></div></div></section><section class="editable-style section-element silex-id-1623698703545-0 page-agence-responsable paged-element paged-element-visible"><div class="editable-style container-element silex-id-1623698703546-1 silex-element-content website-width prevent-draggable"><div class="editable-style text-element silex-id-1623698796830-4 from-bottom distance0 delay800 style-big-title"><div class="silex-element-content normal"><h2>Éco-<br>conception<b><br></b></h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div class="editable-style text-element silex-id-1624367796960-13 style-blanc-fer-gauche from-bottom delay800 distance0"><div class="silex-element-content normal"><h3>L'impact écologique d'une page est lié au nombre de requêtes qu'elle génère, à son poids et aux accès à la base de données.<br></h3></div></div><div class="editable-style text-element silex-id-1623700675335-1 style-pages-blanc from-bottom delay400"><div class="silex-element-content normal"><h2>La techno statique : la base.</h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div class="editable-style text-element silex-id-1623700675335-0 style-blanc-fer-gauche from-bottom delay400"><div class="silex-element-content normal"><p>L'Agence du Futur est l'agence experte en technologie statique. Plus rapide, plus agile, plus performante, cette technologie permet aussi de générer un flux de données restreint, contrairement aux CMS. Et d'avoir une empreinte carbone drastiquement réduite.<br></p><p>Nos sites sont pourtant facilement éditables par nos clients, puisque nous proposons un back-office customisé, très simple à utiliser.</p><p>La techno statique, c'est aussi bon pour le référencement et le taux de rebond. Bref, c'est tout bénef.</p><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div class="editable-style container-element silex-id-1623750186597-4 hide-on-mobile"></div><div class="editable-style text-element silex-id-1646138103197-2 style-pages-blanc from-bottom delay400 text-editor-focus" data-allow-silex-shortcuts="true"><div class="silex-element-content normal wysihtml-editor"><h2>L'hébergement <br>éco-responsable</h2></div></div><div class="editable-style text-element silex-id-1646138227945-3 style-blanc-fer-gauche from-bottom delay400"><div class="silex-element-content normal"><p><b>L’hébergement que nous proposons utilise 100% d’énergies renouvelables, et il est situé en France. Le bilan carbone du data center est même négatif, puisqu'il qu’il produit plus d’énergie qu’il n’en consomme, grâce à son carénage de panneaux photovoltaïques.</b></p>
+<section class="editable-style section-element silex-id-1614260166086-0 hide-on-mobile"><div class="editable-style container-element silex-id-1614260166086-1 silex-element-content website-width prevent-draggable"></div></section><section class="editable-style section-element silex-id-1478366444112-1 fixed fullwidth borderscroll"><div class="editable-style container-element silex-id-1478366444112-0 website-width"><a class="editable-style container-element silex-id-1614074801022-0" href="{{ site.url }}{{ site.baseurl }}/"></a><a class="editable-style text-element silex-id-1608643161504-0 style-bouton anime ovale hide-on-mobile" href="#contact"><div class="silex-element-content normal"><p>contactez-nous<br></p><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></a></div></section><section class="editable-style section-element silex-id-1623698703545-0 page-agence-responsable paged-element paged-element-visible"><div class="editable-style container-element silex-id-1623698703546-1 silex-element-content website-width prevent-draggable"><div class="editable-style text-element silex-id-1623698796830-4 from-bottom distance0 delay800 style-big-title"><div class="silex-element-content normal"><h2>Éco-<br>conception<b><br></b></h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div class="editable-style text-element silex-id-1624367796960-13 style-blanc-fer-gauche from-bottom delay800 distance0"><div class="silex-element-content normal"><h3>L'impact écologique d'une page est lié au nombre de requêtes qu'elle génère, à son poids et aux accès à la base de données.<br></h3></div></div><div class="editable-style text-element silex-id-1623700675335-1 style-pages-blanc from-bottom delay400"><div class="silex-element-content normal"><h2>La techno statique : la base.</h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div class="editable-style text-element silex-id-1623700675335-0 style-blanc-fer-gauche from-bottom delay400"><div class="silex-element-content normal"><p>L'Agence du Futur est l'agence experte en technologie statique. Plus rapide, plus agile, plus performante, cette technologie permet aussi de générer un flux de données restreint, contrairement aux CMS. Et d'avoir une empreinte carbone drastiquement réduite.<br></p><p>Nos sites sont pourtant facilement éditables par nos clients, puisque nous proposons un back-office customisé, très simple à utiliser.</p><p>La techno statique, c'est aussi bon pour le référencement et le taux de rebond. Bref, c'est tout bénef.</p><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div class="editable-style container-element silex-id-1623750186597-4 hide-on-mobile"></div><div class="editable-style text-element silex-id-1646138103197-2 style-pages-blanc from-bottom delay400 text-editor-focus" data-allow-silex-shortcuts="true"><div class="silex-element-content normal wysihtml-editor"><h2>L'hébergement <br>éco-responsable</h2></div></div><div class="editable-style text-element silex-id-1646138227945-3 style-blanc-fer-gauche from-bottom delay400"><div class="silex-element-content normal"><p><b>L’hébergement que nous proposons utilise 100% d’énergies renouvelables, et il est situé en France. Le bilan carbone du data center est même négatif, puisqu'il qu’il produit plus d’énergie qu’il n’en consomme, grâce à son carénage de panneaux photovoltaïques.</b></p>
 <p><b>Les serveurs basse consommation sont&nbsp;</b>optimisés pour réduire leur consommation d’énergie de 70% par rapport à leur équivalent standard.</p>
 
 
