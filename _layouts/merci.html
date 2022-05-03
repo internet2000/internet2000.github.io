@@ -63,70 +63,7 @@
 
 
 
-<section class="editable-style section-element silex-id-1614260166086-0 hide-on-mobile"><div class="editable-style container-element silex-id-1614260166086-1 silex-element-content website-width prevent-draggable"></div></section><section class="editable-style section-element silex-id-1478366444112-1 fixed fullwidth borderscroll"><div class="editable-style container-element silex-id-1478366444112-0 website-width"><a class="editable-style container-element silex-id-1614074801022-0" href="{{ site.url }}{{ site.baseurl }}/"></a><a class="editable-style text-element silex-id-1608643161504-0 style-bouton anime ovale hide-on-mobile" href="#contact"><div class="silex-element-content normal"><p>contactez-nous<br></p><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></a><div class="editable-style text-element silex-id-1600854862441-7 hide-on-desktop silex-component-hamburger prevent-resizable prevent-auto-z-index style-carbon-score"><div class="silex-element-content normal">
-<!-- inspired by https://codepen.io/erikterwan/pen/EVzeRP -->
-<div class="hamburger-menu_1649851700048_299 closed">
-    <div class="hamburger-btn ">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="nav-container">
-      <div class="prevent-scale">
-        <nav class="">
-            <ul>
-            
-                <li><a href="{{ site.url }}{{ site.baseurl }}/" title="Accueil">Accueil</a></li>
-            
-                <li><a href="{{ site.url }}{{ site.baseurl }}/agence-responsable/" title="Agence Responsable">agence responsable</a></li>
-            
-                <li><a href="#contact" title="Contact">Contactez-nous</a></li>
-            
-            </ul>
-        </nav>
-      </div>
-  </div>
-</div>
-<script>
-(function() {
-  var isOpen = false;
-  function close() {
-    isOpen = false;
-    document.querySelector('.hamburger-menu_1649851700048_299').classList.remove('open');
-    document.querySelector('.hamburger-menu_1649851700048_299').classList.add('closed');
-  }
-  function open() {
-    isOpen = true;
-    document.querySelector('.hamburger-menu_1649851700048_299').classList.add('open');
-    document.querySelector('.hamburger-menu_1649851700048_299').classList.remove('closed');
-  }
-  function toggle() {
-    if(isOpen) close();
-    else open();
-  }
-  function scrollOrResize() {
-    close();
-    move();
-  }
-  var silexElement = document.querySelector('.hamburger-menu_1649851700048_299').closest('.editable-style');
-  function move() {
-    var data = window.silex
-    var rect = silexElement.getBoundingClientRect();
-    var offset = {
-      top: rect.top + data.scrollTop,
-      left: rect.left + data.scrollLeft,
-    };
-    var container = document.querySelector('.hamburger-menu_1649851700048_299 .nav-container');
-    container.style.transform = 'translate(' + (data.scrollLeft - (offset.left/data.scale)) + 'px, ' + (data.scrollTop - (offset.top/data.scale)) + 'px)';
-  }
-  document.querySelector('.hamburger-menu_1649851700048_299 .hamburger-btn').addEventListener('click', function() { toggle(); });
-  document.addEventListener('resize', scrollOrResize);
-  document.addEventListener('scroll', scrollOrResize);
-  scrollOrResize()
-  setTimeout(() => scrollOrResize(), 0)
-})();
-</script>
-</div></div></div></section><div class="editable-style section-element silex-id-1608982886521-1 page-merci paged-element paged-element-visible"><div class="editable-style container-element silex-id-1608982886522-2 silex-element-content prevent-draggable hero website-width"><a class="editable-style text-element silex-id-1608982874459-0 style-footer" href="{{ site.url }}{{ site.baseurl }}/"><div class="silex-element-content normal"><p>Merci pour votre message ! nous vous répondons bien vite.</p><p>&nbsp;Pour revenir sur Internet 2000, <b>c'est par ici !</b></p></div></a><a class="editable-style text-element silex-id-1614348383481-10 style-bouton anime ovale" href="{{ site.url }}{{ site.baseurl }}/"><div class="silex-element-content normal"><p>l'agence du futur</p></div></a></div></div><section class="editable-style section-element silex-id-1610546653486-28"><div class="editable-style container-element silex-id-1610546653487-29 silex-element-content website-width prevent-draggable"><div class="editable-style html-element silex-id-1610620501288-4 contact"><div class="silex-element-content"><a name="contact"></a></div></div><div class="editable-style text-element silex-id-1610546769083-32 style-home-blanc from-bottom delay-300"><div class="silex-element-content normal"><h2>Parlons-nous !</h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div class="editable-style html-element silex-id-1610983781173-0 style-etude-de-cas"><div class="silex-element-content"><form name="contact" class="contact" action="https://formspree.io/f/xrgjeeab" method="post"><input type="hidden" name="form-name" value="contact">
+<section class="editable-style section-element silex-id-1614260166086-0 hide-on-mobile"><div class="editable-style container-element silex-id-1614260166086-1 silex-element-content website-width prevent-draggable"></div></section><section class="editable-style section-element silex-id-1478366444112-1 fixed fullwidth borderscroll"><div class="editable-style container-element silex-id-1478366444112-0 website-width"><a class="editable-style container-element silex-id-1614074801022-0" href="{{ site.url }}{{ site.baseurl }}/"></a><a class="editable-style text-element silex-id-1608643161504-0 style-bouton anime ovale hide-on-mobile" href="#contact"><div class="silex-element-content normal"><p>contactez-nous<br></p><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></a></div></section><div class="editable-style section-element silex-id-1608982886521-1 page-merci paged-element paged-element-visible"><div class="editable-style container-element silex-id-1608982886522-2 silex-element-content prevent-draggable hero website-width"><a class="editable-style text-element silex-id-1608982874459-0 style-footer" href="{{ site.url }}{{ site.baseurl }}/"><div class="silex-element-content normal"><p>Merci pour votre message ! nous vous répondons bien vite.</p><p>&nbsp;Pour revenir sur Internet 2000, <b>c'est par ici !</b></p></div></a><a class="editable-style text-element silex-id-1614348383481-10 style-bouton anime ovale" href="{{ site.url }}{{ site.baseurl }}/"><div class="silex-element-content normal"><p>l'agence du futur</p></div></a></div></div><section class="editable-style section-element silex-id-1610546653486-28"><div class="editable-style container-element silex-id-1610546653487-29 silex-element-content website-width prevent-draggable"><div class="editable-style html-element silex-id-1610620501288-4 contact"><div class="silex-element-content"><a name="contact"></a></div></div><div class="editable-style text-element silex-id-1610546769083-32 style-home-blanc from-bottom delay-300"><div class="silex-element-content normal"><h2>Parlons-nous !</h2><span class="_wysihtml-temp-caret-fix" style="position: absolute; display: block; min-width: 1px; z-index: 99999;">﻿</span></div></div><div class="editable-style html-element silex-id-1610983781173-0 style-etude-de-cas"><div class="silex-element-content"><form name="contact" class="contact" action="https://formspree.io/f/xrgjeeab" method="post"><input type="hidden" name="form-name" value="contact">
 
   <div>
     <label for="field1">Prénom, Nom</label>
