@@ -1,4 +1,4 @@
-name: Github Pages deployment
+name: Ftp deployment
 on: [push]
 
 jobs:
@@ -18,9 +18,13 @@ jobs:
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
           URL: ${{ secrets.URL }}
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v1.1.0
-        env:
-          PUBLISH_DIR: _site 
-          PUBLISH_BRANCH: gh-pages
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+      - name: FTP transfer
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: ${{ secrets.ftp_host }}
+          port: ${{ secrets.ftp_port }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          protocol: ${{ secrets.ftp_protocol }}
+          server-dir: ${{ secrets.ftp_path }}
+          local-dir: ${{ secrets.ftp_local_path }}
